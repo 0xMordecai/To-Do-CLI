@@ -9,3 +9,6 @@ type item struct {
 	CreatedAt   time.Time
 	CompletedAt time.Time
 }
+
+// List represents a list of ToDo items
+type List []item
