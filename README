@@ -2,7 +2,7 @@
 
 This tool helps you keep track of items left in a project or activity.  
 
-## Features
+# Features
 - Track items for any project or activity
 - Save the list of items to a file
 - Uses **JSON** format for storage
