@@ -1,4 +1,8 @@
-# Project Item Tracker [To-Do]
+# Project Item Tracker
 
-This tool will let you keep track of items left in a project or activity.  
-The tool will save the list of items in a file using the **JSON** format.
+This tool helps you keep track of items left in a project or activity.  
+
+## Features
+- Track items for any project or activity
+- Save the list of items to a file
+- Uses **JSON** format for storage
