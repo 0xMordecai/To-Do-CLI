@@ -28,3 +28,6 @@ func (l *List) Add(task string) {
 	// append call to access the underlying slice.
 	*l = append(*l, t)
 }
+
+// Complete method marks a ToDo item as completed by
+// setting Done = true and CompletedAt to the current time
