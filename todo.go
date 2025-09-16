@@ -90,4 +90,8 @@ func (l *List) Get(filename string) error {
 		}
 		return err
 	}
+	if len(file) == 0 {
+		return nil
+	}
+	return json.Unmarshal(file, l)
 }
