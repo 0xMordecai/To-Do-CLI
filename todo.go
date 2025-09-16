@@ -14,6 +14,7 @@ type item struct {
 type List []item
 
 // Add creates a new todo item and appends it to the list
+// --> (l *List) is a reciever that will attach Add() method to List type
 func (l *List) Add(task string) {
 	t := item{
 		Task:        task,
