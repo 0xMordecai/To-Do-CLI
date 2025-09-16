@@ -1,6 +1,7 @@
 package todo
 
 import (
+	"encoding/json"
 	"fmt"
 	"time"
 )
@@ -63,4 +64,11 @@ func (l *List) Delete(i int) error {
 	// *l = ...: Updates the original list (since l is a pointer).
 
 	return nil
+}
+
+// Save Method encodes the List as JSON and saves it
+// using the provided file name
+
+func (l *List) Save(filename string) error {
+	js, err := json.Marshal(l)
 }
