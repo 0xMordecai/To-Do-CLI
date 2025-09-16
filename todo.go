@@ -46,3 +46,8 @@ func (l *List) Complete(i int) error {
 
 	return nil
 }
+
+// Delete method deletes a ToDo item from the list
+func (l *List) Delete(i int) error {
+	ls := *l
+}
