@@ -56,9 +56,11 @@ func (l *List) Delete(i int) error {
 
 	// Adjusting index for 0 based index
 	*l = append(ls[:i-1], ls[i:]...)
+
 	// 	ls[:i-1]: Gets all items before the one to delete.
 	//  ls[i:]: Gets all items after the one to delete.
 	//  append(ls[:i-1], ls[i:]...): Concatenates the two slices, effectively removing the item at index i-1.
 	// *l = ...: Updates the original list (since l is a pointer).
+
 	return nil
 }
