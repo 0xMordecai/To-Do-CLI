@@ -12,3 +12,14 @@ type item struct {
 
 // List represents a list of ToDo items
 type List []item
+
+// Add creates a new todo item and appends it to the list
+func (l *List) Add(task string) {
+	t := item{
+		Task:        task,
+		Done:        false,
+		CreatedAt:   time.Now(),
+		CompletedAt: time.Time{},
+	}
+	*l = append(*l, t)
+}
