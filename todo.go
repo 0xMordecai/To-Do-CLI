@@ -56,4 +56,5 @@ func (l *List) Delete(i int) error {
 
 	// Adjusting index for 0 based index
 	*l = append(ls[:i-1], ls[i:]...)
+	return nil
 }
