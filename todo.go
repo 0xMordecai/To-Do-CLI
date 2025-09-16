@@ -24,5 +24,7 @@ func (l *List) Add(task string) {
 		CreatedAt:   time.Now(),
 		CompletedAt: time.Time{},
 	}
+	// 	Note that you need to dereference the pointer to the List type with *l in the
+	// append call to access the underlying slice.
 	*l = append(*l, t)
 }
