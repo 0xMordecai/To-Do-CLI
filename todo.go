@@ -77,3 +77,6 @@ func (l *List) Save(filename string) error {
 	}
 	return ioutil.WriteFile(filename, js, 0644)
 }
+
+// Get method opens the provided file name, decodes
+// the JSON data and parses it into a List
