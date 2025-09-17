@@ -36,3 +36,5 @@ func TestComplete(t *testing.T) {
 		t.Errorf("New task should be completed.")
 	}
 }
+
+// TestDelete tests the Delete method of the List type
