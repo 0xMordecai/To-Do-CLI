@@ -66,3 +66,5 @@ func TestDelete(t *testing.T) {
 	}
 
 }
+
+// TestSaveGet tests the Save and Get methods of the List type
