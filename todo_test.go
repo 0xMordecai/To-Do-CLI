@@ -33,7 +33,7 @@ func TestComplete(t *testing.T) {
 	if l[0].Done {
 		t.Errorf("New task should not be completed.")
 	}
-
+	l.Complete(1)
 	if !l[0].Done {
 		t.Errorf("New task should be completed.")
 	}
