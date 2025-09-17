@@ -38,3 +38,17 @@ func TestComplete(t *testing.T) {
 }
 
 // TestDelete tests the Delete method of the List type
+func TestDelete(t *testing.T) {
+	l := todo.List{}
+
+	tasks := []string{
+		"New Task 1",
+		"New Task 2",
+		"New Task ",
+	}
+
+	for _, v := range tasks {
+		l.Add(v)
+	}
+
+}
