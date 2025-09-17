@@ -8,7 +8,7 @@ import (
 	todo "github.com/0xMordecai/To-Do-CLI"
 )
 
-// TestAdd tests the Add method of the List type
+// TestAdd tests the Add method of the List type.
 func TestAdd(t *testing.T) {
 	l := todo.List{}
 
