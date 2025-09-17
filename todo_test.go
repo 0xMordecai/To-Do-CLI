@@ -2,6 +2,7 @@ package todo_test
 
 import (
 	"io/ioutil"
+	"os"
 	"testing"
 
 	todo "github.com/0xMordecai/To-Do-CLI"
@@ -85,7 +86,7 @@ func TestSaveGet(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Error saving list to file: %s", err)
 	}
-
+	defer os.Remove(tf.Name())
 	if err := l2.Get(tf.Name()); err != nil {
 		t.Fatalf("Error getting list from file: %s", err)
 	}
