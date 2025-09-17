@@ -51,4 +51,14 @@ func TestDelete(t *testing.T) {
 		l.Add(v)
 	}
 
+	if l[0].Task != tasks[0] {
+		t.Errorf("Expected %q, got %q instead", tasks[0], l[0].Task)
+	}
+
+	l.Delete(2)
+
+	if len(l) != 2 {
+		t.Errorf("Expected list length %d, got %d instead.", 2, len(l))
+	}
+
 }
