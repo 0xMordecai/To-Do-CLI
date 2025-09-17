@@ -87,6 +87,11 @@ func TestSaveGet(t *testing.T) {
 		t.Fatalf("Error saving list to file: %s", err)
 	}
 	defer os.Remove(tf.Name())
+
+	if err := l1.Save(tf.Name()); err != nil {
+		t.Fatalf("Error saving list to file: %s", err)
+	}
+
 	if err := l2.Get(tf.Name()); err != nil {
 		t.Fatalf("Error getting list from file: %s", err)
 	}
