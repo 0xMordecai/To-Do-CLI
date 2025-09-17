@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	todo "github.com/0xMordecai/To-Do-CLI.git"
+	todo "github.com/0xMordecai/To-Do-CLI"
 )
 
 // TestAdd tests the Add method of the List type
