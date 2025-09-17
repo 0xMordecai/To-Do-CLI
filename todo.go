@@ -41,7 +41,7 @@ func (l *List) Add(task string) {
 func (l *List) Complete(i int) error {
 	ls := *l
 	if i <= 0 || i > len(ls) {
-		return fmt.Errorf("Item %d does not exist\n", i)
+		return fmt.Errorf("Item %d does not exist", i)
 	}
 
 	// Adjusting index for 0 based index
