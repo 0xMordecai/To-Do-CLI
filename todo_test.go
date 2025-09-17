@@ -17,6 +17,7 @@ func TestAdd(t *testing.T) {
 	}
 }
 
+// TestComplete tests the Complete method of the List type
 func TestComplete(t *testing.T) {
 	l := todo.List{}
 
