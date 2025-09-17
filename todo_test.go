@@ -39,7 +39,7 @@ func TestComplete(t *testing.T) {
 	}
 }
 
-// TestDelete tests the Delete method of the List type
+// TestDelete tests the Delete method of the List type.
 func TestDelete(t *testing.T) {
 	l := todo.List{}
 
