@@ -69,7 +69,7 @@ func TestDelete(t *testing.T) {
 
 }
 
-// TestSaveGet tests the Save and Get methods of the List type
+// TestSaveGet tests the Save and Get methods of the List type.
 func TestSaveGet(t *testing.T) {
 	l1 := todo.List{}
 	l2 := todo.List{}
