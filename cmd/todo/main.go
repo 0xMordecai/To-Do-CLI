@@ -9,4 +9,6 @@ func main() {
 	// Define an items list
 	l := &todo.List{}
 
+	// Use the Get() method to read to-do items from file
+
 }
