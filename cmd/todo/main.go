@@ -28,7 +28,10 @@ func main() {
 		for _, item := range *l {
 			fmt.Println(item)
 		}
+	default:
+		// Concatenate all arguments with a space
 	}
 	// Concatenate all provided arguments with a space and
 	// add to the list as an item
+
 }
