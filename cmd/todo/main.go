@@ -28,6 +28,5 @@ func main() {
 		for _, item := range *l {
 			fmt.Println(item)
 		}
-
 	}
 }
