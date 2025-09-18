@@ -29,4 +29,6 @@ func main() {
 			fmt.Println(item)
 		}
 	}
+	// Concatenate all provided arguments with a space and
+	// add to the list as an item
 }
