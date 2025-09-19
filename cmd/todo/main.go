@@ -33,7 +33,7 @@ func main() {
 	// add to the list as an item
 	default:
 		// Concatenate all arguments with a space
-		item := strings.Join(os.Args[1:], "")
+		item := strings.Join(os.Args[1:], " ")
 
 		// Add the task
 		l.Add(item)
