@@ -28,6 +28,7 @@ func TestMain(m *testing.M) {
 		os.Exit(1)
 	}
 
+	// execute the tests using m.Run()
 	fmt.Println("Runnig test....")
 	result := m.Run()
 
