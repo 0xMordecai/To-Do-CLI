@@ -42,3 +42,5 @@ func TestMain(m *testing.M) {
 
 	os.Exit(result)
 }
+
+func TestTodoCLI(t *testing.T) {}
