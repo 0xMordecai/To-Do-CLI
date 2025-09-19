@@ -32,6 +32,8 @@ func TestMain(m *testing.M) {
 	fmt.Println("Runnig test....")
 	result := m.Run()
 
+	// clean up the
+	// produced files after the test is completed using the function os.Remove()
 	fmt.Println("Cleaning up...")
 	os.Remove(binName)
 	os.Remove(fileName)
