@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os/exec"
 	"runtime"
 	"testing"
 )
@@ -16,4 +17,6 @@ func TestMain(m *testing.M) {
 	if runtime.GOOS == "windows" {
 		binName += ".exe"
 	}
+
+	build := exec.Command("go", "build", "-o", binName)
 }
