@@ -19,6 +19,8 @@ func TestMain(m *testing.M) {
 		binName += ".exe"
 	}
 
+	// 	call the go build tool that builds the executable
+	//  binary for your tool
 	build := exec.Command("go", "build", "-o", binName)
 
 	if err := build.Run(); err != nil {
