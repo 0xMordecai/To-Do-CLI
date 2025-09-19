@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"os/exec"
 	"runtime"
 	"testing"
@@ -19,4 +20,9 @@ func TestMain(m *testing.M) {
 	}
 
 	build := exec.Command("go", "build", "-o", binName)
+
+	if err := build.Run(); err != nil {
+		fmt.Fprintf(os.Stderr, "Cannot build tool %s: %s", binName, err)
+		os.Exit(1)
+	}
 }
