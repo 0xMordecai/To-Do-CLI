@@ -15,6 +15,8 @@ var (
 
 func TestMain(m *testing.M) {
 	fmt.Println("Building tool...")
+	// 	We’re using the constant GOOS from the runtime package to check if the tests
+	//  are running on the Windows operating system
 	if runtime.GOOS == "windows" {
 		binName += ".exe"
 	}
