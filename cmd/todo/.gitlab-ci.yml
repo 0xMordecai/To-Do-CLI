@@ -2,6 +2,9 @@ stages:
     - build
     - test_todo_api
 
+variables:
+    GO_VERSION: "1.23-alpine"
+
 build:
     image: golang:1.23-alpine
     stage: build
