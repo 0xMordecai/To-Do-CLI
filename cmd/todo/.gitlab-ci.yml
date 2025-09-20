@@ -12,3 +12,8 @@ build:
 
 test_todo_api:
     image: golang:1.23-alpine
+    stage: test_todo_api
+    before_script: 
+        - go mod download
+    script:
+        - go test 
