@@ -14,7 +14,7 @@ build:
         - go build -o todo
 
 test_todo_api:
-    image: golang:{$GO_VERSION}
+    image: golang:${GO_VERSION}
     stage: test_todo_api
     before_script: 
         - go mod download
