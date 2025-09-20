@@ -7,3 +7,5 @@ build:
     stage: build
     before_script:
         - go mod download
+    script:
+        - go build -o todo
