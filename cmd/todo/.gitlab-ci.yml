@@ -1,6 +1,6 @@
 stages:
     - build
-    - test
+    - test_todo_api
 
 build:
     image: golang:1.23-alpine
