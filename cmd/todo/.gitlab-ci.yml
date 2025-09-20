@@ -1,3 +1,7 @@
 stages:
     - build
     - test
+
+build:
+    stage: build
+    script: golang:1.23-alpine
