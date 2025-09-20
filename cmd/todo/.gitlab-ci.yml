@@ -6,7 +6,7 @@ variables:
     GO_VERSION: "1.23-alpine"
 
 build:
-    image: golang:1.23-alpine
+    image: golang:${GO_VERSION}
     stage: build
     before_script:
         - go mod download
