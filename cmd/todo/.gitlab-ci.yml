@@ -5,3 +5,5 @@ stages:
 build:
     image: golang:1.23-alpine
     stage: build
+    before_script:
+        - go mod download
