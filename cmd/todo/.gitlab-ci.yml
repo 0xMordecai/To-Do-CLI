@@ -9,3 +9,6 @@ build:
         - go mod download
     script:
         - go build -o todo
+
+test_todo_api:
+    image: golang:1.23-alpine
