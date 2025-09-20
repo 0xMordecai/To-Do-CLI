@@ -3,5 +3,5 @@ stages:
     - test
 
 build:
+    image: golang:1.23-alpine
     stage: build
-    script: golang:1.23-alpine
