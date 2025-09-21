@@ -1,6 +1,7 @@
 stages:
     - build
     - test_todo_api
+    - test_main
 
 variables:
     GO_VERSION: "1.23-alpine"
