@@ -28,4 +28,5 @@ test_main:
     before_script:
         - go mod download
     script:
-        
+        - cd cmd/todo
+        - go test -v
