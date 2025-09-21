@@ -20,7 +20,7 @@ test_todo_api:
     before_script: 
         - go mod download
     script:
-        - go test 
+        - go test -v
 
 test_main:
     image: golang:${GO_VERSION}
