@@ -27,7 +27,7 @@ func main() {
 	case len(os.Args) == 1:
 		// List current to do items
 		for _, item := range *l {
-			fmt.Println(item)
+			fmt.Println(item.Task)
 		}
 	// Concatenate all provided arguments with a space and
 	// add to the list as an item
