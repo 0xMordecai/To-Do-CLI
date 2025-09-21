@@ -21,3 +21,11 @@ test_todo_api:
         - go mod download
     script:
         - go test 
+
+test_main:
+    image: golang:${GO_VERSION}
+    stage: test_main
+    before_script:
+        - go mod download
+    script:
+        
