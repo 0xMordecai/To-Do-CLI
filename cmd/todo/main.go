@@ -84,6 +84,11 @@ func main() {
 			os.Exit(1)
 		}
 
+	default:
+		// Invalid flag provided
+		fmt.Fprintln(os.Stderr, "Invalid option")
+		os.Exit(1)
+
 	}
 
 }
