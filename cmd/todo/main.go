@@ -53,5 +53,14 @@ func main() {
 	// }
 
 	// Decide what to do based on the provided flags
+	switch {
+	case *list:
+		// list current to do items
+		for _, item := range *l {
+			if !item.Done {
+				fmt.Println(item.Task)
+			}
+		}
+	}
 
 }
