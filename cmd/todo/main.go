@@ -61,6 +61,13 @@ func main() {
 				fmt.Println(item.Task)
 			}
 		}
+
+	case *complete > 0:
+		// Complete the given item
+		if err := l.Complete(*complete); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
 	}
 
 }
