@@ -52,4 +52,6 @@ func main() {
 	// 	}
 	// }
 
+	// Decide what to do based on the provided flags
+
 }
