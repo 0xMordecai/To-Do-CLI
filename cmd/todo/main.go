@@ -15,6 +15,8 @@ const todoFileName = ".todo.json"
 func main() {
 	// Parsing command line Flags
 	task := flag.String("task", "", "Task to be included in the ToDo list")
+	list := flag.Bool("list", false, "List all tasks")
+	complete := flag.Int()
 	// Define an items list
 	l := &todo.List{}
 
