@@ -74,6 +74,16 @@ func main() {
 			os.Exit(1)
 		}
 
+	case *task != "":
+		// Aff the task
+		l.Add(*task)
+
+		// Save the new list
+		if err := l.Save(todoFileName); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+
 	}
 
 }
