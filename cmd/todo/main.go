@@ -17,6 +17,8 @@ func main() {
 	task := flag.String("task", "", "Task to be included in the ToDo list")
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
+
+	flag.Parse()
 	// Define an items list
 	l := &todo.List{}
 
@@ -33,7 +35,7 @@ func main() {
 		// List current to do items
 		for _, item := range *l {
 			fmt.Println(item.Task) // --> to print only Task
-			//	fmt.Println(item)  // --> to print ALL info
+			//	fmt.Println(item)  // --> to print ALL info :=> fixed BUG
 		}
 	// Concatenate all provided arguments with a space and
 	// add to the list as an item
