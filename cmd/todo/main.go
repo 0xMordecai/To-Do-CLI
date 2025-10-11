@@ -15,7 +15,7 @@ func main() {
 	// change flag.Usage() to display a custom message.==> Now that the user can get proper usage information.
 	flag.Usage = func() {
 		fmt.Fprintf(flag.CommandLine.Output(),
-			"%s tool. Developed for Organize ToDo Tasks\n", os.Args[0])
+			"%s tool. Developed for Organize ToDo Tasks\n\n", os.Args[0])
 		fmt.Fprintf(flag.CommandLine.Output(), "Copyright 2025@LCA DevOps Systems\n\n")
 		fmt.Fprintln(flag.CommandLine.Output(), "Usage information:")
 		flag.PrintDefaults()
