@@ -9,7 +9,7 @@ import (
 )
 
 // Hardcoding the file name
-const todoFileName = ".todo.json"
+var todoFileName = ".todo.json"
 
 func main() {
 	// change flag.Usage() to display a custom message.==> Now that the user can get proper usage information.
