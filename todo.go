@@ -106,6 +106,8 @@ func (l *List) String() string {
 		if t.Done {
 			prefix = "X"
 		}
-
+		// Adjust the item number k to print numbers starting from 1 instead of 0
+		formatted += fmt.Sprintf("%s%d: %s\n", prefix, k+1, t.Task)
 	}
+	return formatted
 }
