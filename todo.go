@@ -98,3 +98,14 @@ func (l *List) Get(filename string) error {
 
 // String prints out a formatted list
 // Implements the fmt.Stringer interface
+func (l *List) String() string {
+	formatted := ""
+
+	for k, t := range *l {
+		prefix := " "
+		if t.Done {
+			prefix = "X"
+		}
+
+	}
+}
