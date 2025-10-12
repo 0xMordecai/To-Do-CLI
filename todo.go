@@ -95,3 +95,6 @@ func (l *List) Get(filename string) error {
 	}
 	return json.Unmarshal(file, l)
 }
+
+// String prints out a formatted list
+// Implements the fmt.Stringer interface
