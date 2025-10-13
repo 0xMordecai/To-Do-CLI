@@ -26,6 +26,8 @@ func main() {
 
 	// Parsing command line Flags
 	// task := flag.String("task", "", "Task to be included in the ToDo list") // --> v1
+
+	add := flag.Bool("add", false, "Add task to ToDo List")
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
 
@@ -61,9 +63,15 @@ func main() {
 			os.Exit(1)
 		}
 
-	case *task != "":
-		// Aff the task
-		l.Add(*task)
+	case *add:
+		// When any arguments (excluding flags) are provided, they will be
+		// used as the new task
+		t, err := getTask(os.Stdin, flag.Args()...)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+		l.Add(t)
 
 		// Save the new list
 		if err := l.Save(todoFileName); err != nil {
