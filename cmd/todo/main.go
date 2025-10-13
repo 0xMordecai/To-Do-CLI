@@ -86,5 +86,8 @@ func getTask(r io.Reader, args ...string) (string, error) {
 	}
 	s := bufio.NewScanner(r)
 	s.Scan()
+	if err := s.Err(); err != nil {
+		return "", nil
+	}
 	return "", nil
 }
