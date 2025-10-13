@@ -91,6 +91,8 @@ func getTask(r io.Reader, args ...string) (string, error) {
 	if len(args) > 0 {
 		return strings.Join(args, ""), nil
 	}
+
+	//	Otherwise, it uses the bufio.Scanner to scan for a single input line on the provided io.Reader interface
 	s := bufio.NewScanner(r)
 	s.Scan()
 	if err := s.Err(); err != nil {
