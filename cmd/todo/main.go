@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
 
 	todo "github.com/0xMordecai/To-Do-CLI"
 )
@@ -79,5 +80,8 @@ func main() {
 }
 
 func getTask(r io.Reader, args ...string) (string, error) {
+	if len(args) > 0 {
+		return strings.Join(args, ""), nil
+	}
 	return "", nil
 }
