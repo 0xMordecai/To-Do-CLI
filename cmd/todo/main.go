@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bufio"
 	"flag"
 	"fmt"
 	"io"
@@ -83,5 +84,7 @@ func getTask(r io.Reader, args ...string) (string, error) {
 	if len(args) > 0 {
 		return strings.Join(args, ""), nil
 	}
+	s := bufio.NewScanner(r)
+	s.Scan()
 	return "", nil
 }
