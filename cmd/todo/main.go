@@ -84,7 +84,9 @@ func main() {
 // and the parameter args, which consists of zero or more values of type string,
 // represented by the ... operator preceding the parameter type
 // The function getTask() returns a string and a potential error
+
 func getTask(r io.Reader, args ...string) (string, error) {
+	//verifies if any arguments were provided as the parameter args
 	if len(args) > 0 {
 		return strings.Join(args, ""), nil
 	}
