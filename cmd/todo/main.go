@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"io"
 	"os"
 
 	todo "github.com/0xMordecai/To-Do-CLI"
@@ -75,4 +76,8 @@ func main() {
 
 	}
 
+}
+
+func getTask(r io.Reader, args ...string) (string, error) {
+	return "", nil
 }
