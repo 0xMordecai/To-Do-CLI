@@ -86,7 +86,8 @@ func main() {
 // The function getTask() returns a string and a potential error
 
 func getTask(r io.Reader, args ...string) (string, error) {
-	//verifies if any arguments were provided as the parameter args
+	//	verifies if any arguments were provided as the parameter args
+	//	If so, it returns all of them concatenated with a space, using the strings.Join() function
 	if len(args) > 0 {
 		return strings.Join(args, ""), nil
 	}
