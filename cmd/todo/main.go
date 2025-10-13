@@ -97,7 +97,7 @@ func getTask(r io.Reader, args ...string) (string, error) {
 	//	verifies if any arguments were provided as the parameter args
 	//	If so, it returns all of them concatenated with a space, using the strings.Join() function
 	if len(args) > 0 {
-		return strings.Join(args, ""), nil
+		return strings.Join(args, " "), nil
 	}
 
 	//	Otherwise, it uses the bufio.Scanner to scan for a single input line on the provided io.Reader interface
