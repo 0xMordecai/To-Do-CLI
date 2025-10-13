@@ -95,6 +95,8 @@ func getTask(r io.Reader, args ...string) (string, error) {
 	//	Otherwise, it uses the bufio.Scanner to scan for a single input line on the provided io.Reader interface
 	s := bufio.NewScanner(r)
 	s.Scan()
+
+	//	If an error occurs while reading the input or the input is blank, it returns an error.
 	if err := s.Err(); err != nil {
 		return "", nil
 	}
