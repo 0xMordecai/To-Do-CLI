@@ -83,6 +83,7 @@ func main() {
 // The getTask() function accepts as input the parameter r of type io.Reader interface
 // and the parameter args, which consists of zero or more values of type string,
 // represented by the ... operator preceding the parameter type
+// The function getTask() returns a string and a potential error
 func getTask(r io.Reader, args ...string) (string, error) {
 	if len(args) > 0 {
 		return strings.Join(args, ""), nil
