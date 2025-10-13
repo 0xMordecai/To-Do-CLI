@@ -25,7 +25,7 @@ func main() {
 	}
 
 	// Parsing command line Flags
-	task := flag.String("task", "", "Task to be included in the ToDo list")
+	// task := flag.String("task", "", "Task to be included in the ToDo list") // --> v1
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
 
