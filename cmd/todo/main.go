@@ -118,6 +118,11 @@ func main() {
 				fmt.Printf("%d - Task: %s,creation-date: %s\n", k+1, t.Task, t.CreatedAt)
 			}
 		}
+		//	Save the new list
+		if err := l.Save(todoFileName); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
 
 	default:
 		//	Invalid flag provided
