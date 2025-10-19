@@ -111,6 +111,14 @@ func main() {
 			os.Exit(1)
 		}
 
+	// Exercice 3
+	case *only_incompleted:
+		for k, t := range *l {
+			if t.Done == false {
+				fmt.Printf("%d - Task: %s,creation-date: %s\n", k+1, t.Task, t.CreatedAt)
+			}
+		}
+
 	default:
 		//	Invalid flag provided
 		fmt.Fprintln(os.Stderr, "Invalid option")
