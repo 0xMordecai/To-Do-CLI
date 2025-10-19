@@ -82,11 +82,13 @@ func main() {
 		}
 
 	case *delete > 0:
+		//	Delete the given list index
 		if err := l.Delete(*delete); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
 
+		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
