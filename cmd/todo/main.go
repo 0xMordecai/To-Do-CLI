@@ -87,6 +87,11 @@ func main() {
 			os.Exit(1)
 		}
 
+		if err := l.Save(todoFileName); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+
 	default:
 		//	Invalid flag provided
 		fmt.Fprintln(os.Stderr, "Invalid option")
