@@ -15,7 +15,7 @@ import (
 var todoFileName = ".todo.json"
 
 func main() {
-	// change flag.Usage() to display a custom message.==> Now that the user can get proper usage information.
+	//	change flag.Usage() to display a custom message.==> Now that the user can get proper usage information.
 	flag.Usage = func() {
 		fmt.Fprintf(flag.CommandLine.Output(),
 			"%s tool. Developed for Organize ToDo Tasks\n\n", os.Args[0])
@@ -24,49 +24,49 @@ func main() {
 		flag.PrintDefaults()
 	}
 
-	// Parsing command line Flags
-	// task := flag.String("task", "", "Task to be included in the ToDo list") // --> v1
+	//	Parsing command line Flags
+	//	task := flag.String("task", "", "Task to be included in the ToDo list") //	--> v1
 
 	add := flag.Bool("add", false, "Add task to ToDo List")
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
-	// Exercices : Implement the flag -del to delete an item from the list. Use the Delete() method from the API to perform the action.
+	//	Exercices : Implement the flag -del to delete an item from the list. Use the Delete() method from the API to perform the action.
 
 	flag.Parse()
-	// Check if the user defined the ENV VAR for costume nfile name
+	//	Check if the user defined the ENV VAR for costume nfile name
 	if os.Getenv("TODO_FILENAME") != "" {
 		todoFileName = os.Getenv("TODO_FILENAME")
 	}
-	// Define an items list
+	//	Define an items list
 	l := &todo.List{}
 
-	// Use the Get() method to read to-do items from file
+	//	Use the Get() method to read to-do items from file
 	if err := l.Get(todoFileName); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 
-	// Decide what to do based on the provided flags
+	//	Decide what to do based on the provided flags
 	switch {
 	case *list:
-		// list current to do items
+		//	list current to do items
 		fmt.Print(l)
 
 	case *complete > 0:
-		// Complete the given item
+		//	Complete the given item
 		if err := l.Complete(*complete); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
-		// Save the new list
+		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
 
 	case *add:
-		// When any arguments (excluding flags) are provided, they will be
-		// used as the new task
+		//	When any arguments (excluding flags) are provided, they will be
+		//	used as the new task
 		t, err := getTask(os.Stdin, flag.Args()...)
 		if err != nil {
 			fmt.Fprintln(os.Stderr, err)
@@ -74,14 +74,14 @@ func main() {
 		}
 		l.Add(t)
 
-		// Save the new list
+		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
 
 	default:
-		// Invalid flag provided
+		//	Invalid flag provided
 		fmt.Fprintln(os.Stderr, "Invalid option")
 		os.Exit(1)
 
@@ -89,10 +89,10 @@ func main() {
 
 }
 
-// The getTask() function accepts as input the parameter r of type io.Reader interface
-// and the parameter args, which consists of zero or more values of type string,
-// represented by the ... operator preceding the parameter type
-// The function getTask() returns a string and a potential error
+//	The getTask() function accepts as input the parameter r of type io.Reader interface
+//	and the parameter args, which consists of zero or more values of type string,
+//	represented by the ... operator preceding the parameter type
+//	The function getTask() returns a string and a potential error
 
 func getTask(r io.Reader, args ...string) (string, error) {
 	//	verifies if any arguments were provided as the parameter args
