@@ -31,6 +31,7 @@ func main() {
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
 	//	Exercices : Implement the flag -del to delete an item from the list. Use the Delete() method from the API to perform the action.
+	delete := flag.Int("del", 0, "delete an item from the list")
 
 	flag.Parse()
 	//	Check if the user defined the ENV VAR for costume nfile name
@@ -76,6 +77,12 @@ func main() {
 
 		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+
+	case *delete > 0:
+		if err := l.Delete(*delete); err != nil {
 			fmt.Fprintln(os.Stderr, err)
 			os.Exit(1)
 		}
