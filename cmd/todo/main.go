@@ -113,6 +113,7 @@ func main() {
 
 	// Exercice 3
 	case *only_incompleted:
+		//	prevent displaying completed items.
 		for k, t := range *l {
 			if t.Done {
 				fmt.Print("")
