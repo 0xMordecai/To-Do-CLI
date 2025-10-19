@@ -34,6 +34,8 @@ func main() {
 	delete := flag.Int("del", 0, "delete an item from the list")
 	//	Exercice 2: Add another flag to enable verbose output, showing information like date/time.
 	date_list := flag.Bool("date_list", false, "showing information about date/time.")
+	//	Exercice 3: Add another flag to prevent displaying completed items.
+	only_incompleted := flag.Bool("-only_incompleted", false, "displaying only incompleted tasks")
 
 	flag.Parse()
 	//	Check if the user defined the ENV VAR for costume nfile name
