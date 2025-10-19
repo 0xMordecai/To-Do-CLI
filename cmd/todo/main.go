@@ -33,7 +33,7 @@ func main() {
 	//	Exercices 1: Implement the flag -del to delete an item from the list. Use the Delete() method from the API to perform the action.
 	delete := flag.Int("del", 0, "delete an item from the list")
 	//	Exercice 2: Add another flag to enable verbose output, showing information like date/time.
-	date_list := flag.Bool("date-list", false, "showing information about date/time.")
+	date_list := flag.Bool("date_list", false, "showing information about date/time.")
 
 	flag.Parse()
 	//	Check if the user defined the ENV VAR for costume nfile name
@@ -99,8 +99,9 @@ func main() {
 
 	//	Exercice 2
 	case *date_list:
-		list := l.Get(todoFileName)
-		fmt.Print(list)
+		for k, t := range *l {
+			fmt.Sprintf("%d - Task: %s,creation-date: %s", k+1, t.Task, t.CreatedAt)
+		}
 		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
 			fmt.Fprintln(os.Stderr, err)
