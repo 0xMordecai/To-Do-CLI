@@ -100,7 +100,7 @@ func main() {
 	//	Exercice 2
 	case *date_list:
 		for k, t := range *l {
-			fmt.Print("%d - Task: %s,creation-date: %\n", k+1, t.Task, t.CreatedAt)
+			fmt.Printf("%d - Task: %s,creation-date: %s\n", k+1, t.Task, t.CreatedAt)
 		}
 		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
