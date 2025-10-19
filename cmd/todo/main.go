@@ -30,6 +30,7 @@ func main() {
 	add := flag.Bool("add", false, "Add task to ToDo List")
 	list := flag.Bool("list", false, "List all tasks")
 	complete := flag.Int("complete", 0, "Item to be completed")
+	// Exercices : Implement the flag -del to delete an item from the list. Use the Delete() method from the API to perform the action.
 
 	flag.Parse()
 	// Check if the user defined the ENV VAR for costume nfile name
