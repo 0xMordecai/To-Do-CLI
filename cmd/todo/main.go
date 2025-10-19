@@ -99,6 +99,7 @@ func main() {
 
 	//	Exercice 2
 	case *date_list:
+		//	showing information about date/time.
 		for k, t := range *l {
 			fmt.Printf("%d - Task: %s,creation-date: %s\n", k+1, t.Task, t.CreatedAt)
 		}
