@@ -34,6 +34,7 @@ func main() {
 	delete := flag.Int("del", 0, "delete an item from the list")
 	//	Exercice 2: Add another flag to enable verbose output, showing information like date/time.
 	date_list := flag.Bool("date-list", false, "showing information about date/time.")
+
 	flag.Parse()
 	//	Check if the user defined the ENV VAR for costume nfile name
 	if os.Getenv("TODO_FILENAME") != "" {
@@ -82,6 +83,7 @@ func main() {
 			os.Exit(1)
 		}
 
+	//	Exercice 1
 	case *delete > 0:
 		//	Delete the given list index
 		if err := l.Delete(*delete); err != nil {
@@ -89,6 +91,16 @@ func main() {
 			os.Exit(1)
 		}
 
+		//	Save the new list
+		if err := l.Save(todoFileName); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+
+	//	Exercice 2
+	case *date_list:
+		list := l.Get(todoFileName)
+		fmt.Print(list)
 		//	Save the new list
 		if err := l.Save(todoFileName); err != nil {
 			fmt.Fprintln(os.Stderr, err)
