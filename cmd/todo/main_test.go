@@ -90,4 +90,6 @@ func TestTodoCLI(t *testing.T) {
 			t.Errorf("Expected %q, got %q instead\n", expected, string(out))
 		}
 	})
+
+	// 	Exercice 5: Include test cases for the remaining options, such as -complete.
 }
