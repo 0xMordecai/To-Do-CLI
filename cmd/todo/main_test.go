@@ -92,7 +92,8 @@ func TestTodoCLI(t *testing.T) {
 	})
 
 	// 	Exercice 5: Include test cases for the remaining options, such as -complete.
+	taskIndex := "1"
 	t.Run("CompleteTasks", func(t *testing.T) {
-
+		cmd := exec.Command(cmdPath, "-complete", taskIndex)
 	})
 }
