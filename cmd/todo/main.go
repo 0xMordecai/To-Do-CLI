@@ -20,10 +20,10 @@ func main() {
 		fmt.Fprintf(flag.CommandLine.Output(),
 			"%s tool. Developed for Organize ToDo Tasks\n\n", os.Args[0])
 		fmt.Fprintf(flag.CommandLine.Output(), "Copyright 2025@LCA DevOps Systems\n\n")
-		fmt.Fprintln(flag.CommandLine.Output(), "Usage information:")
+		fmt.Fprintln(flag.CommandLine.Output(), "Usage information:\n")
 		//	Exercice 4:	Update the custom usage function to include additional instructions on how to provide new tasks to the tool.
-		fmt.Fprintf(flag.CommandLine.Output(), "how to provide new tasks: \n\n")
-		fmt.Fprintf(flag.CommandLine.Output(), "./todo -task [your task name]")
+		fmt.Fprintf(flag.CommandLine.Output(), "how to provide new tasks: \n")
+		fmt.Fprintf(flag.CommandLine.Output(), "./todo -task [your task name] \n\n")
 		flag.PrintDefaults()
 	}
 
