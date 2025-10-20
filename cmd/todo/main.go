@@ -25,6 +25,7 @@ func main() {
 		fmt.Fprintf(flag.CommandLine.Output(), "how to provide new tasks: \n")
 		fmt.Fprintf(flag.CommandLine.Output(), "\t1- From Arguments: ./todo -add [''your task name''] \n")
 		fmt.Fprintf(flag.CommandLine.Output(), "\t2- From STDIN: ./todo -add [your task name] \n\n")
+
 		flag.PrintDefaults()
 	}
 
