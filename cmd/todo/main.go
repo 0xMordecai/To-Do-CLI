@@ -23,6 +23,7 @@ func main() {
 		fmt.Fprintln(flag.CommandLine.Output(), "Usage information:")
 		//	Exercice 4:	Update the custom usage function to include additional instructions on how to provide new tasks to the tool.
 		fmt.Fprintf(flag.CommandLine.Output(), "how to provide new tasks: \n\n")
+		fmt.Fprintf(flag.CommandLine.Output(), "./todo -task [your task name]")
 		flag.PrintDefaults()
 	}
 
