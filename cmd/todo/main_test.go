@@ -92,4 +92,7 @@ func TestTodoCLI(t *testing.T) {
 	})
 
 	// 	Exercice 5: Include test cases for the remaining options, such as -complete.
+	t.Run("CompleteTasks", func(t *testing.T) {
+
+	})
 }
