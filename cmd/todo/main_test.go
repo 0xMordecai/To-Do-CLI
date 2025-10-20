@@ -104,7 +104,7 @@ func TestTodoCLI(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		expected := fmt.Sprintf(" 1: %s\n X 2: %s\n", task, task2)
+		expected := fmt.Sprintf(" 1: %s\nX 2: %s\n", task, task2)
 		if expected != string(out) {
 			t.Errorf("Expected %q, got %q instead\n", expected, string(out))
 		}
