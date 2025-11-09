@@ -1,0 +1,56 @@
+name: Go CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  GO_VERSION: 1.23
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    container: golang:${{ env.GO_VERSION }}-alpine
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Build binary
+        run: go build -o todo
+
+  test_todo_api:
+    name: Test Todo API
+    runs-on: ubuntu-latest
+    container: golang:${{ env.GO_VERSION }}-alpine
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Run tests
+        run: go test -v ./...
+
+  test_main:
+    name: Test Main
+    runs-on: ubuntu-latest
+    container: golang:${{ env.GO_VERSION }}-alpine
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Run tests in cmd/todo
+        working-directory: cmd/todo
+        run: go test -v
